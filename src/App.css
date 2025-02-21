@@ -20,6 +20,10 @@
   align-items: center;
   margin-top: 200px;
   flex-direction: column;
+  border: 1px solid black;
+  width: 700px;
+  margin: 100px auto;
+  border-radius: 10px;
 }
 
 .button_close {
@@ -45,6 +49,7 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   margin-bottom: 50px;
+  margin-top: 20px;
 }
 
 .button_open:hover {
@@ -57,7 +62,15 @@
 }
 
 .cart {
-  margin-top: 50px;
+  border: 1px solid black;
+  width: 500px;
+  padding: 15px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
 
 .card {
@@ -90,4 +103,62 @@
   gap: 10px;
   justify-content: center;
   align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 150px;
+  margin: 50px auto;
+  border-radius: 10px;
+}
+
+.ikkinchi {
+  border: 1px solid black;
+  width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.add {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: blueviolet;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.add:hover {
+  background-color: rgb(55, 16, 93);
+}
+
+.same {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: blueviolet;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.same:hover {
+  background-color: rgb(55, 16, 93);
+}
+
+.end {
+  border: 1px solid black;
+  width: 200px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  border-radius: 10px;
 }

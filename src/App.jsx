@@ -14,9 +14,6 @@ function App() {
   const cart = useSelector(state => state.cart.value)
   const auth = useSelector(state => state.auth.value)
   const totalPrice = cart.reduce((price, item) => price + item.price, 0);
-  console.log(cart)
-
-  console.log(products)
 
   useEffect(() => {
     if (modal === true) {
@@ -46,12 +43,7 @@ function App() {
       quantity: 10
     }
     dispatch(addProduct(product))
-    console.log(products)
   }
-
-  useEffect(() => {
-    console.log("Updated products:", products);
-  }, [products]);
 
   function handleDelete(id) {
     dispatch(removeProduct(id))
@@ -92,6 +84,7 @@ function App() {
   return (
     <div>
       <div className="main_div">
+        <h1>1</h1>
         <button disabled={block} style={{ backgroundColor: block === true ? 'rgb(72, 72, 72)' : '' }} className="button_open" onClick={handleTrue}>Open Modal</button>
         {
           modal === true && <div className="modal">
@@ -101,30 +94,33 @@ function App() {
       </div>
 
       {/* 2nd of homework */}
+      <div className="ikkinchi">
+        <h1>2</h1>
+        <button className="add" onClick={handleAdder}>Add</button>
 
-      <button onClick={handleAdder}>Add</button>
-
-      <div>
-        {
-          products.length > 0 && products.map((item) => {
-            return (
-              <div className="products" key={item.id}>
-                <span><b>Id:</b> {item.id},</span>
-                <span><b>Name:</b> {item.name},</span>
-                <span><b>Price:</b> {item.price},</span>
-                <span><b>Quantity:</b> {item.quantity}</span>
-                <button onClick={() => handleDelete(item.id)}>Delete</button>
-                <button onClick={() => handleEdit(item.id)}>Edit</button>
-              </div>
-            )
-          })
-        }
+        <div>
+          {
+            products.length > 0 && products.map((item) => {
+              return (
+                <div className="products" key={item.id}>
+                  <span><b>Id:</b> {item.id},</span>
+                  <span><b>Name:</b> {item.name},</span>
+                  <span><b>Price:</b> {item.price},</span>
+                  <span><b>Quantity:</b> {item.quantity}</span>
+                  <button className="same" onClick={() => handleDelete(item.id)}>Delete</button>
+                  <button className="same" onClick={() => handleEdit(item.id)}>Edit</button>
+                </div>
+              )
+            })
+          }
+        </div>
       </div>
 
       {/* 3 */}
 
       <div className="cart">
-        <button onClick={handleAddToCart}>Add To Cart</button>
+        <h1>3</h1>
+        <button className="same" onClick={handleAddToCart}>Add To Cart</button>
 
         <div className="mt">
           {
@@ -137,8 +133,8 @@ function App() {
                   <p><b>Product Name:</b> {item.name}</p>
                   <p><b>Product Price:</b> {item.price}</p>
                   <p><b>Product Count:</b> {item.quantity}</p>
-                  <button onClick={() => handleDeleteCart(index)}>Delete</button>
-                  <button onClick={handleReset}>Reset</button>
+                  <button className="same" onClick={() => handleDeleteCart(index)}>Delete</button>
+                  <button className="same" onClick={handleReset}>Reset</button>
                 </div>
               )
             })
@@ -146,12 +142,17 @@ function App() {
         </div>
       </div>
 
+      {/* 4 */}
+      
+      <div className="end">
+      <h1>4</h1>
+      <h2>Persist Qilindi</h2>
+      </div>
+
       {/* 5 */}
 
       <div className="btns">
-        {/* <button onClick={handleLogin} className="same_btn">Login</button>
-        <button onClick={handleLogout} className="same_btn">Logout</button> */}
-
+        <h1>5</h1>
         {
           auth === 'login' ? <button onClick={handleLogout} className="same_btn">Logout</button> : <button onClick={handleLogin} className="same_btn">Login</button>
         }
