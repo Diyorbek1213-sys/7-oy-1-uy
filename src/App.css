@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.modal {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+  border-radius: 10px;
+}
+
+.main_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  flex-direction: column;
+}
+
+.button_close {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: blueviolet;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.button_close:hover {
+  background-color: rgb(58, 19, 93);
+}
+
+.button_open {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: blueviolet;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 50px;
+}
+
+.button_open:hover {
+  background-color: rgb(58, 19, 93);
+}
+
+.products {
+  display: flex;
+  gap: 5px;
+}
+
+.cart {
+  margin-top: 50px;
+}
+
+.card {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  width: 260px;
+}
+
+.mt {
+  margin-top: 20px;
+}
+
+.same_btn {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: yellow;
+  color: gray;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.same_btn:hover {
+  background-color: rgb(106, 106, 0);
+}
+
+.btns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
